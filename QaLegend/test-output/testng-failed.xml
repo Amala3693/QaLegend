@@ -8,8 +8,9 @@
     <classes>
       <class name="TestScripts.Qalegend_SuppliersTest">
         <methods>
+          <include name="editSupplier"/>
           <include name="initializemethod"/>
-          <include name="deleteSupplier"/>
+          <include name="afterMethod"/>
         </methods>
       </class> <!-- TestScripts.Qalegend_SuppliersTest -->
     </classes>

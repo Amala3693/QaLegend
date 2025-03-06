@@ -4,8 +4,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.FluentWait;
 
 import Utilities.Pageutilities;
+import Utilities.Waitutilities;
 
 public class QaLegendContactsPage {
 	WebDriver driver;
@@ -60,6 +62,7 @@ public class QaLegendContactsPage {
 		//Pageutilities.enterNumber(mobileNumber, mobnum);
 		Pageutilities.enterText(mobileNumber, mobnum);
 		Pageutilities.clickOnAnElement(supplierSaveButton);
+		Waitutilities.waitForElementtobeInvisible(driver, supplierSaveButton);
 		return this;
 	}
 	public void searchSupplier(String suname)
@@ -70,11 +73,13 @@ public class QaLegendContactsPage {
 	public String supplierNameSearch()
 	{
 		String sname = Pageutilities.getText(supplierNameCell);
+		Waitutilities.waitForVisibilityOfElement(supplierNameCell, driver);
 		return sname;
 	}
 	public void clickActionBtn()
 	{
 		Pageutilities.clickUsingJavaScriptExecuter(actionButton, driver);
+		Waitutilities.waitForVisibilityOfElement(actionButton, driver);
 	}
 	public void clickOnDeleteBtn() throws InterruptedException
 	{
@@ -89,6 +94,7 @@ public class QaLegendContactsPage {
 	public void clickOnEditBtn()
 	{
 		Pageutilities.clickOnAnElement(editSupplierButton);
+		Waitutilities.waitForVisibilityOfElement(editSupplierButton, driver);
 	}
 	public void clickOnUpdateBtn()
 	{
@@ -103,5 +109,7 @@ public class QaLegendContactsPage {
 	{
 		updateSupBNameButton.clear();
 		updateSupBNameButton.sendKeys(businessName);
+		Waitutilities.waitForElementtobeInvisible(driver, updateSupplierButton);
 	}
+	
 }

@@ -21,10 +21,10 @@
 	  <class name="TestScripts.Qalegend_SuppliersTest">
 		  <methods>
 			  <!--<include name = "addSuppliers"></include>-->
-			  <!--<include name = "editSupplier"></include>-->
-			  <include name = "deleteSupplier"></include>
+			  <include name = "editSupplier"></include>
+			  <!--<include name = "deleteSupplier"></include>-->
 		  </methods>
-    </class>
+    </class>-->
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

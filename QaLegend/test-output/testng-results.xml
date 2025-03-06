@@ -1,20 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-04T13:47:07 IST" name="Suite" finished-at="2025-03-04T13:47:34 IST" duration-ms="27438">
+  <suite started-at="2025-03-06T20:54:55 IST" name="Suite" finished-at="2025-03-06T20:55:51 IST" duration-ms="56425">
     <groups>
     </groups>
-    <test started-at="2025-03-04T13:47:07 IST" name="Test" finished-at="2025-03-04T13:47:34 IST" duration-ms="27438">
+    <test started-at="2025-03-06T20:54:55 IST" name="Test" finished-at="2025-03-06T20:55:51 IST" duration-ms="56425">
       <class name="TestScripts.Qalegend_SuppliersTest">
-        <test-method is-config="true" signature="initializemethod()[pri:0, instance:TestScripts.Qalegend_SuppliersTest@421e361]" started-at="2025-03-04T13:47:07 IST" name="initializemethod" finished-at="2025-03-04T13:47:10 IST" duration-ms="3711" status="PASS">
+        <test-method is-config="true" signature="initializemethod()[pri:0, instance:TestScripts.Qalegend_SuppliersTest@34f6515b]" started-at="2025-03-06T20:54:55 IST" name="initializemethod" finished-at="2025-03-06T20:55:00 IST" duration-ms="5084" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializemethod -->
-        <test-method signature="deleteSupplier()[pri:0, instance:TestScripts.Qalegend_SuppliersTest@421e361]" started-at="2025-03-04T13:47:10 IST" name="deleteSupplier" finished-at="2025-03-04T13:47:34 IST" duration-ms="23656" status="PASS">
+        <test-method signature="editSupplier()[pri:0, instance:TestScripts.Qalegend_SuppliersTest@34f6515b]" started-at="2025-03-06T20:55:00 IST" name="editSupplier" finished-at="2025-03-06T20:55:51 IST" duration-ms="50705" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on windows (0d2f77a0348f1252d1198955b27f9b74)] -> xpath: //a[@class='edit_contact_button']] (tried for 40 second(s) with 500 milliseconds interval)
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.142, chrome: {chromedriverVersion: 133.0.6943.141 (2a5d6da0d61..., userDataDir: C:\Users\amala\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50320}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50320/devtoo..., se:cdpVersion: 133.0.6943.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0d2f77a0348f1252d1198955b27f9b74]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on windows (0d2f77a0348f1252d1198955b27f9b74)] -> xpath: //a[@class='edit_contact_button']] (tried for 40 second(s) with 500 milliseconds interval)
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.142, chrome: {chromedriverVersion: 133.0.6943.141 (2a5d6da0d61..., userDataDir: C:\Users\amala\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50320}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50320/devtoo..., se:cdpVersion: 133.0.6943.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0d2f77a0348f1252d1198955b27f9b74
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+at Utilities.Waitutilities.waitForVisibilityOfElement(Waitutilities.java:33)
+at PageClasses.QaLegendContactsPage.clickOnEditBtn(QaLegendContactsPage.java:97)
+at TestScripts.Qalegend_SuppliersTest.editSupplier(Qalegend_SuppliersTest.java:57)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- deleteSupplier -->
+        </test-method> <!-- editSupplier -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:TestScripts.Qalegend_SuppliersTest@34f6515b]" started-at="2025-03-06T20:55:51 IST" name="afterMethod" finished-at="2025-03-06T20:55:51 IST" duration-ms="555" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=editSupplier status=FAILURE method=Qalegend_SuppliersTest.editSupplier()[pri:0, instance:TestScripts.Qalegend_SuppliersTest@34f6515b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
       </class> <!-- TestScripts.Qalegend_SuppliersTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->

@@ -72,6 +72,7 @@ public void addRole()
 	userPage.scrollBarRole();
 	userPage.saveRoleBtn();
 	userPage.searchRole(rolename);
+	Assert.assertEquals(userPage.roleNameSearch(),rolename);
 }
 @Test
 public void listRole() throws InterruptedException
@@ -81,8 +82,7 @@ public void listRole() throws InterruptedException
 	homePage.clickOnAnUserManagementButton();
 	homePage.clickOnRolesBtn();
 	userPage.entryFieldSelect();
-	Thread.sleep(3000);
-	//Waitutilities.waitForVisibilityOfElement(rol, driver);
+	//Thread.sleep(3000);
 	userPage.rolesSizeFinder();
 }
 @Test
