@@ -73,13 +73,11 @@ public class QaLegendContactsPage {
 	public String supplierNameSearch()
 	{
 		String sname = Pageutilities.getText(supplierNameCell);
-		Waitutilities.waitForVisibilityOfElement(supplierNameCell, driver);
 		return sname;
 	}
 	public void clickActionBtn()
 	{
 		Pageutilities.clickUsingJavaScriptExecuter(actionButton, driver);
-		Waitutilities.waitForVisibilityOfElement(actionButton, driver);
 	}
 	public void clickOnDeleteBtn() throws InterruptedException
 	{
@@ -94,7 +92,6 @@ public class QaLegendContactsPage {
 	public void clickOnEditBtn()
 	{
 		Pageutilities.clickOnAnElement(editSupplierButton);
-		Waitutilities.waitForVisibilityOfElement(editSupplierButton, driver);
 	}
 	public void clickOnUpdateBtn()
 	{
@@ -109,7 +106,6 @@ public class QaLegendContactsPage {
 	{
 		updateSupBNameButton.clear();
 		updateSupBNameButton.sendKeys(businessName);
-		Waitutilities.waitForElementtobeInvisible(driver, updateSupplierButton);
 	}
 	
 }

@@ -51,17 +51,17 @@ public class Qalegend_SuppliersTest extends Base_Class{
 		String mobnum = ExcelUtilities.getIntegerData(1, 2, Constants.EXCELFILEPATH, "Sheet1")+Fakertility.getRandomNumber();
 		supplierpage.addSupplierString(supname, supbusname, mobnum);
 		supplierpage.searchSupplier(supname);
-		//Thread.sleep(3000);
+		Thread.sleep(3000);
 		supplierpage.clickActionBtn();
-		//Thread.sleep(3000);
+		Thread.sleep(3000);
 		supplierpage.clickOnEditBtn();
-		//Thread.sleep(3000);
+		Thread.sleep(3000);
 		String supbussinessname = ExcelUtilities.getStringData(1, 3, Constants.EXCELFILEPATH, "Sheet1")+Fakertility.getRandomNumber();
 		supplierpage.editSupplierBusinessName(supbussinessname);
 		supplierpage.clickOnUpdateBtn();
-		//Thread.sleep(3000);
+		Thread.sleep(3000);
 		supplierpage.searchSupplier(supname);
-		//Thread.sleep(3000);	
+		Thread.sleep(3000);	
 		Assert.assertEquals(supplierpage.supplierNameSearch(), supname);
 	}
 	@Test

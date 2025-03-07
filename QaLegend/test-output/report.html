@@ -56,7 +56,7 @@
           </li>
             <li class="m-r-10">
                 <a href="#">
-                    <span class="badge badge-primary">Mar 6, 2025 08:54:55 pm</span>
+                    <span class="badge badge-primary">Mar 7, 2025 08:04:30 pm</span>
                 </a>
             </li>
         </ul>
@@ -131,19 +131,19 @@
 					</div>
 					<div class="open-test">
 						<div class="test-detail">
-							<p class="name">editSupplier</p>
-							<p class="duration text-sm">0h 0m 50s+691ms</p>
-							<span class="datetime">20:55:00 pm</span>
+							<p class="name">listRole</p>
+							<p class="duration text-sm">0h 0m 10s+381ms</p>
+							<span class="datetime">20:04:34 pm</span>
 						</div>
 					</div>
 					<div class="test-contents d-none">
 						<div class="detail-head">
 							<div class="p-v-10 d-inline-block">
 								<div class="info">
-									<h5 class="test-status text-fail">editSupplier</h5>
-									<span class='badge badge-success'>03.06.2025 20:55:00</span>
-									<span class='badge badge-danger'>03.06.2025 20:55:51</span>
-									<span class='badge badge-default'>0h 0m 50s+691ms</span>
+									<h5 class="test-status text-fail">listRole</h5>
+									<span class='badge badge-success'>03.07.2025 20:04:34</span>
+									<span class='badge badge-danger'>03.07.2025 20:04:44</span>
+									<span class='badge badge-default'>0h 0m 10s+381ms</span>
 								</div>
 								<div class="m-t-10 m-l-5">
 									
@@ -160,26 +160,22 @@
 	<tbody>
 			<tr class="event-row">
 				<td><i class="fa fa-times text-fail"></i></td>
-				<td>8:55:51 pm</td>
+				<td>8:04:44 pm</td>
 				<td>
 						Test case Failed
 				</td>
 			</tr>
 			<tr class="event-row">
 				<td><i class="fa fa-times text-fail"></i></td>
-				<td>8:55:51 pm</td>
+				<td>8:04:44 pm</td>
 				<td>
-						<textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on windows (0d2f77a0348f1252d1198955b27f9b74)] -> xpath: //a[@class='edit_contact_button']] (tried for 40 second(s) with 500 milliseconds interval)
-Build info: version: '4.27.0', revision: 'd6e718d134'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.142, chrome: {chromedriverVersion: 133.0.6943.141 (2a5d6da0d61..., userDataDir: C:\Users\amala\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50320}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50320/devtoo..., se:cdpVersion: 133.0.6943.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 0d2f77a0348f1252d1198955b27f9b74
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
-	at Utilities.Waitutilities.waitForVisibilityOfElement(Waitutilities.java:33)
-	at PageClasses.QaLegendContactsPage.clickOnEditBtn(QaLegendContactsPage.java:97)
-	at TestScripts.Qalegend_SuppliersTest.editSupplier(Qalegend_SuppliersTest.java:57)
+						<textarea disabled class="code-block">java.lang.AssertionError: expected [100] but found [100]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:644)
+	at TestScripts.Qalegend_UsersTest.listRole(Qalegend_UsersTest.java:87)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -256,13 +252,13 @@ Session ID: 0d2f77a0348f1252d1198955b27f9b74
 				<li class="test-item">
 					<div class="open-test">
 						<div class="test-detail">
-							<p class="name">org.openqa.selenium.TimeoutException</p>
+							<p class="name">java.lang.AssertionError</p>
 							<p class="duration text-sm">1 tests</p>
 						</div>
 					</div>
 					<div class="test-contents d-none">
 						<div class="info">
-							<h4>org.openqa.selenium.TimeoutException</h4>
+							<h4>java.lang.AssertionError</h4>
 						</div>
 						<table class='table table-sm mt-4'>
 							<thead>
@@ -279,9 +275,9 @@ Session ID: 0d2f77a0348f1252d1198955b27f9b74
 											<i class="fa fa-times text-white"></i>
 										</div>
 									</td>
-									<td>20:55:00 pm</td>
+									<td>20:04:34 pm</td>
 									<td class='linked' test-id='1'>
-										editSupplier
+										listRole
 									</td>
 								</tr>
 							</tbody>
@@ -378,7 +374,7 @@ Session ID: 0d2f77a0348f1252d1198955b27f9b74
 					<div class="media justify-content-between">
 						<div class="card-header">
 							<h6 class="card-title">Start</h6>
-							<h4 class="font-weight-light mt-4">Mar 6, 2025 08:54:55 pm</h4>
+							<h4 class="font-weight-light mt-4">Mar 7, 2025 08:04:30 pm</h4>
 							<span class="text-semibold text-success font-size-15">
 						</div>
 						<div class="align-self-end">
@@ -394,7 +390,7 @@ Session ID: 0d2f77a0348f1252d1198955b27f9b74
 					<div class="media justify-content-between">
 						<div class="card-header">
 							<h6 class="card-title">Duration</h6>
-							<h4 class="font-weight-light mt-4">0h 0m 56s+803ms</h4>
+							<h4 class="font-weight-light mt-4">0h 0m 16s+712ms</h4>
 							<span class="text-semibold font-size-15">
 						</div>
 						<div class="align-self-end">
@@ -489,7 +485,7 @@ Session ID: 0d2f77a0348f1252d1198955b27f9b74
 </script>
 <script>
 	var timeline = {
-	        "editSupplier":50.691
+	        "listRole":10.381
 	};
 </script>
                 </div>

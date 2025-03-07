@@ -6,23 +6,24 @@
 	</listeners>
   <test thread-count="5" name="Test">
     <classes>
-      <!--<class name="TestScripts.Qalegend_UsersTest">
+      <class name="TestScripts.Qalegend_UsersTest">
 		  <methods>
-			  <include name = "createUser"></include>
+			  <!--<include name = "createUser"></include>
 			  <include name = "deleteUser"></include>
-			  <include name = "addRole"></include>
+			  <include name = "addRole"></include>-->
 			  <include name = "listRole"></include>
-			  <include name = "editRole"></include>
+			  <!--<include name = "editRole"></include>
 			  <include name = "addSalesCommissionAgent"></include>
-			  <include name = "editSalesCommissionAgent"></include>
+			  <include name = "editSalesCommissionAgent"></include>-->
 			  
 		  </methods>
 	  </class>-->
-	  <class name="TestScripts.Qalegend_SuppliersTest">
+	  <!--<class name="TestScripts.Qalegend_SuppliersTest">
 		  <methods>
-			  <!--<include name = "addSuppliers"></include>-->
+			  <include name = "addSuppliers"></include>
 			  <include name = "editSupplier"></include>
-			  <!--<include name = "deleteSupplier"></include>-->
+			  
+			  <include name = "deleteSupplier"></include>
 		  </methods>
     </class>-->
     </classes>

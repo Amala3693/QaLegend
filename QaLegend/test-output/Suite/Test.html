@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Mar 06 20:54:55 IST 2025</td>
+<td>Started on:</td><td>Fri Mar 07 20:04:30 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>56 seconds (56425 ms)</td>
+<tr><td>Total time:</td><td>16 seconds (16373 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,31 +76,18 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='TestScripts.Qalegend_SuppliersTest.editSupplier()'><b>editSupplier</b><br>Test class: TestScripts.Qalegend_SuppliersTest</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on windows (0d2f77a0348f1252d1198955b27f9b74)] -&gt; xpath: //a[@class=&apos;edit_contact_button&apos;]] (tried for 40 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.142, chrome: {chromedriverVersion: 133.0.6943.141 (2a5d6da0d61..., userDataDir: C:\Users\amala\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50320}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50320/devtoo..., se:cdpVersion: 133.0.6943.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 0d2f77a0348f1252d1198955b27f9b74
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
-	at Utilities.Waitutilities.waitForVisibilityOfElement(Waitutilities.java:33)
-	at PageClasses.QaLegendContactsPage.clickOnEditBtn(QaLegendContactsPage.java:97)
-	at TestScripts.Qalegend_SuppliersTest.editSupplier(Qalegend_SuppliersTest.java:57)
+<td title='TestScripts.Qalegend_UsersTest.listRole()'><b>listRole</b><br>Test class: TestScripts.Qalegend_UsersTest</td>
+<td><div><pre>java.lang.AssertionError: expected [100] but found [100]
+	at TestScripts.Qalegend_UsersTest.listRole(Qalegend_UsersTest.java:87)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1523683407", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1523683407'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on windows (0d2f77a0348f1252d1198955b27f9b74)] -&gt; xpath: //a[@class=&apos;edit_contact_button&apos;]] (tried for 40 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.142, chrome: {chromedriverVersion: 133.0.6943.141 (2a5d6da0d61..., userDataDir: C:\Users\amala\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50320}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50320/devtoo..., se:cdpVersion: 133.0.6943.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 0d2f77a0348f1252d1198955b27f9b74
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
-	at Utilities.Waitutilities.waitForVisibilityOfElement(Waitutilities.java:33)
-	at PageClasses.QaLegendContactsPage.clickOnEditBtn(QaLegendContactsPage.java:97)
-	at TestScripts.Qalegend_SuppliersTest.editSupplier(Qalegend_SuppliersTest.java:57)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1052127672", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1052127672'><pre>java.lang.AssertionError: expected [100] but found [100]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:644)
+	at TestScripts.Qalegend_UsersTest.listRole(Qalegend_UsersTest.java:87)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -130,8 +117,8 @@ Session ID: 0d2f77a0348f1252d1198955b27f9b74
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>50</td>
-<td>TestScripts.Qalegend_SuppliersTest@34f6515b</td></tr>
+<td>10</td>
+<td>TestScripts.Qalegend_UsersTest@14008db3</td></tr>
 </table><p>
 </body>
 </html>

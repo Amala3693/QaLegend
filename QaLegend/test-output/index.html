@@ -103,7 +103,7 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="TestScripts.Qalegend_SuppliersTest" class="method navigator-link" hash-for-method="editSupplier">editSupplier</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="TestScripts.Qalegend_UsersTest" class="method navigator-link" hash-for-method="listRole">listRole</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -121,27 +121,18 @@
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">TestScripts.Qalegend_SuppliersTest</span>
+              <span class="class-name">TestScripts.Qalegend_UsersTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="editSupplier">
-                  </a> <!-- editSupplier -->
-                  <span class="method-name">editSupplier</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on windows (0d2f77a0348f1252d1198955b27f9b74)] -&gt; xpath: //a[@class=&apos;edit_contact_button&apos;]] (tried for 40 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.142, chrome: {chromedriverVersion: 133.0.6943.141 (2a5d6da0d61..., userDataDir: C:\Users\amala\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50320}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50320/devtoo..., se:cdpVersion: 133.0.6943.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 0d2f77a0348f1252d1198955b27f9b74
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
-	at Utilities.Waitutilities.waitForVisibilityOfElement(Waitutilities.java:33)
-	at PageClasses.QaLegendContactsPage.clickOnEditBtn(QaLegendContactsPage.java:97)
-	at TestScripts.Qalegend_SuppliersTest.editSupplier(Qalegend_SuppliersTest.java:57)
+                  <a name="listRole">
+                  </a> <!-- listRole -->
+                  <span class="method-name">listRole</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [100] but found [100]
+	at TestScripts.Qalegend_UsersTest.listRole(Qalegend_UsersTest.java:87)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames
+... Removed 32 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -162,11 +153,11 @@ Session ID: 0d2f77a0348f1252d1198955b27f9b74
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;TestScripts.Qalegend_SuppliersTest&quot;&gt;
+      &lt;class name=&quot;TestScripts.Qalegend_UsersTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;editSupplier&quot;/&gt;
+          &lt;include name=&quot;listRole&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- TestScripts.Qalegend_SuppliersTest --&gt;
+      &lt;/class&gt; &lt;!-- TestScripts.Qalegend_UsersTest --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -208,14 +199,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'editSupplier')
-data.setCell(0, 2, 'TestScripts.Qalegend_SuppliersTest')
-data.setCell(0, 3, 50705);
+data.setCell(0, 1, 'listRole')
+data.setCell(0, 2, 'TestScripts.Qalegend_UsersTest')
+data.setCell(0, 3, 10374);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 50 seconds</span>
+              <span class="suite-total-time">Total running time: 10 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -230,15 +221,23 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">2 ignored methods</span>
+            <span class="header-content">6 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">TestScripts.Qalegend_SuppliersTest</span>
+              <span class="ignored-class-name">TestScripts.Qalegend_UsersTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">deleteSupplier</span>
+                <span class="ignored-method-name">editSalesCommissionAgent</span>
                 <br/>
-                <span class="ignored-method-name">addSuppliers</span>
+                <span class="ignored-method-name">addSalesCommissionAgent</span>
+                <br/>
+                <span class="ignored-method-name">editRole</span>
+                <br/>
+                <span class="ignored-method-name">deleteUser</span>
+                <br/>
+                <span class="ignored-method-name">addRole</span>
+                <br/>
+                <span class="ignored-method-name">createUser</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -250,7 +249,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">TestScripts.Qalegend_SuppliersTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">TestScripts.Qalegend_UsersTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">initializemethod</span>
                 <span class="method-start">0 ms</span>
@@ -258,12 +257,12 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">editSupplier</span>
-                <span class="method-start">5088 ms</span>
+                <span class="method-name">listRole</span>
+                <span class="method-start">3617 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=editSupplier status=FAILURE method=Qalegend_SuppliersTest.editSupplier()[pri:0, ins...)</span>
-                <span class="method-start">55807 ms</span>
+                <span class="method-name">afterMethod([TestResult name=listRole status=FAILURE method=Qalegend_UsersTest.listRole()[pri:0, instance:TestSc...)</span>
+                <span class="method-start">14034 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

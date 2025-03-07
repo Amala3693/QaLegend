@@ -84,6 +84,8 @@ public void listRole() throws InterruptedException
 	userPage.entryFieldSelect();
 	//Thread.sleep(3000);
 	userPage.rolesSizeFinder();
+	Assert.assertEquals(userPage.rolesSizeFinder(),"100");
+
 }
 @Test
 public void editRole() throws InterruptedException

@@ -2,37 +2,28 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-06T20:54:55 IST" name="Suite" finished-at="2025-03-06T20:55:51 IST" duration-ms="56425">
+  <suite started-at="2025-03-07T20:04:30 IST" name="Suite" finished-at="2025-03-07T20:04:46 IST" duration-ms="16373">
     <groups>
     </groups>
-    <test started-at="2025-03-06T20:54:55 IST" name="Test" finished-at="2025-03-06T20:55:51 IST" duration-ms="56425">
-      <class name="TestScripts.Qalegend_SuppliersTest">
-        <test-method is-config="true" signature="initializemethod()[pri:0, instance:TestScripts.Qalegend_SuppliersTest@34f6515b]" started-at="2025-03-06T20:54:55 IST" name="initializemethod" finished-at="2025-03-06T20:55:00 IST" duration-ms="5084" status="PASS">
+    <test started-at="2025-03-07T20:04:30 IST" name="Test" finished-at="2025-03-07T20:04:46 IST" duration-ms="16373">
+      <class name="TestScripts.Qalegend_UsersTest">
+        <test-method is-config="true" signature="initializemethod()[pri:0, instance:TestScripts.Qalegend_UsersTest@14008db3]" started-at="2025-03-07T20:04:30 IST" name="initializemethod" finished-at="2025-03-07T20:04:34 IST" duration-ms="3616" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializemethod -->
-        <test-method signature="editSupplier()[pri:0, instance:TestScripts.Qalegend_SuppliersTest@34f6515b]" started-at="2025-03-06T20:55:00 IST" name="editSupplier" finished-at="2025-03-06T20:55:51 IST" duration-ms="50705" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
+        <test-method signature="listRole()[pri:0, instance:TestScripts.Qalegend_UsersTest@14008db3]" started-at="2025-03-07T20:04:34 IST" name="listRole" finished-at="2025-03-07T20:04:44 IST" duration-ms="10374" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on windows (0d2f77a0348f1252d1198955b27f9b74)] -> xpath: //a[@class='edit_contact_button']] (tried for 40 second(s) with 500 milliseconds interval)
-Build info: version: '4.27.0', revision: 'd6e718d134'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.142, chrome: {chromedriverVersion: 133.0.6943.141 (2a5d6da0d61..., userDataDir: C:\Users\amala\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50320}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50320/devtoo..., se:cdpVersion: 133.0.6943.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 0d2f77a0348f1252d1198955b27f9b74]]>
+              <![CDATA[expected [100] but found [100]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on windows (0d2f77a0348f1252d1198955b27f9b74)] -> xpath: //a[@class='edit_contact_button']] (tried for 40 second(s) with 500 milliseconds interval)
-Build info: version: '4.27.0', revision: 'd6e718d134'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.142, chrome: {chromedriverVersion: 133.0.6943.141 (2a5d6da0d61..., userDataDir: C:\Users\amala\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50320}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50320/devtoo..., se:cdpVersion: 133.0.6943.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 0d2f77a0348f1252d1198955b27f9b74
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
-at Utilities.Waitutilities.waitForVisibilityOfElement(Waitutilities.java:33)
-at PageClasses.QaLegendContactsPage.clickOnEditBtn(QaLegendContactsPage.java:97)
-at TestScripts.Qalegend_SuppliersTest.editSupplier(Qalegend_SuppliersTest.java:57)
+              <![CDATA[java.lang.AssertionError: expected [100] but found [100]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:644)
+at TestScripts.Qalegend_UsersTest.listRole(Qalegend_UsersTest.java:87)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -63,22 +54,22 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- editSupplier -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:TestScripts.Qalegend_SuppliersTest@34f6515b]" started-at="2025-03-06T20:55:51 IST" name="afterMethod" finished-at="2025-03-06T20:55:51 IST" duration-ms="555" status="PASS">
+        </test-method> <!-- listRole -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:TestScripts.Qalegend_UsersTest@14008db3]" started-at="2025-03-07T20:04:44 IST" name="afterMethod" finished-at="2025-03-07T20:04:46 IST" duration-ms="2293" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=editSupplier status=FAILURE method=Qalegend_SuppliersTest.editSupplier()[pri:0, instance:TestScripts.Qalegend_SuppliersTest@34f6515b] output={null}]]]>
+                <![CDATA[[TestResult name=listRole status=FAILURE method=Qalegend_UsersTest.listRole()[pri:0, instance:TestScripts.Qalegend_UsersTest@14008db3] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- TestScripts.Qalegend_SuppliersTest -->
+      </class> <!-- TestScripts.Qalegend_UsersTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
