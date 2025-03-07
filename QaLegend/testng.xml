@@ -8,10 +8,10 @@
     <classes>
       <class name="TestScripts.Qalegend_UsersTest">
 		  <methods>
-			  <!--<include name = "createUser"></include>
+			  <include name = "createUser"></include>
 			  <include name = "deleteUser"></include>
-			  <include name = "addRole"></include>-->
-			  <include name = "listRole"></include>
+			 <!-- <include name = "addRole"></include>-->
+			  <!--<include name = "listRole"></include>-->
 			  <!--<include name = "editRole"></include>
 			  <include name = "addSalesCommissionAgent"></include>
 			  <include name = "editSalesCommissionAgent"></include>-->

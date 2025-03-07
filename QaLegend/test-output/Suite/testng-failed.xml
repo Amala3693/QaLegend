@@ -6,13 +6,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="TestScripts.Qalegend_SuppliersTest">
+      <class name="TestScripts.Qalegend_UsersTest">
         <methods>
-          <include name="editSupplier"/>
+          <include name="listRole"/>
           <include name="initializemethod"/>
           <include name="afterMethod"/>
         </methods>
-      </class> <!-- TestScripts.Qalegend_SuppliersTest -->
+      </class> <!-- TestScripts.Qalegend_UsersTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
