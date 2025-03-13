@@ -52,10 +52,15 @@ public class QaLegendUserPage {
 	List<WebElement> rolesList;
 	@FindBy(xpath = "(//a[@class='btn btn-xs btn-primary'])[3]")
 	WebElement editRole;
-	@FindBy(xpath = "//ins[@class='iCheck-helper']")
+	/*
+	 * @FindBy(xpath = "//div[@id='roles_table_info']") WebElement tableInfoField;
+	 */
+	@FindBy(xpath = "(//ins[@class='iCheck-helper'])[1]")
 	WebElement selectCheckBox;
 	@FindBy(xpath = "//button[@class='btn btn-primary pull-right']")
 	WebElement updateRoleButton;
+	@FindBy(xpath = "(//tr[@class='odd' or @class='even']//td)[7]")
+	WebElement searchEditedElement;
 	@FindBy(xpath = "//button[@class='btn btn-primary btn-modal pull-right']")
 	WebElement addSalesCommissionButton;
 	@FindBy(xpath = "//input[@id='first_name']")
@@ -145,11 +150,17 @@ public class QaLegendUserPage {
 		Pageutilities.clickOnAnElement(entrynum);
 		Pageutilities.selectByValue(entrynum, "100");
 		Pageutilities.clickOnAnElement(entrynum);//to close drawer menu of the entries list
+		//Waitutilities.waitTillClosingTheTab(driver, entrynum);
 	}
 	public int rolesSizeFinder()
 	{
 		return(rolesList.size());
 	}
+
+	/*
+	 * public void tableInfo() {
+	 * Pageutilities.scrollTillElementVisible(tableInfoField, driver); }
+	 */
 	public void editRole()
 	{
 		Pageutilities.clickOnAnElement(editRole);
@@ -164,7 +175,14 @@ public class QaLegendUserPage {
 	}
 	public void updateRoleBtn()
 	{
+		Waitutilities.waitForClickingElement(updateRoleButton, driver);
 		Pageutilities.clickOnAnElement(updateRoleButton);
+	}
+	public String searchEditedRole()
+	{
+		String ename = Pageutilities.getText(searchEditedElement);
+		Waitutilities.waitForTextToBePresentInElement(searchEditedElement, driver, ename);
+		return ename;
 	}
 	public WebElement addsalesCommissionBtn()
 	{
@@ -180,29 +198,37 @@ public class QaLegendUserPage {
 	}
 	public void saveSalesCommissionAgentBtn()
 	{
+		Waitutilities.waitForClickingElement(saveSalesCommissionAgentbutton, driver);
 		Pageutilities.clickOnAnElement(saveSalesCommissionAgentbutton);
+		Waitutilities.waitForElementtobeInvisible(driver, saveSalesCommissionAgentbutton);
 	}
 	public void searchSalesCommissionAgent(String fname)
 	{
 		Pageutilities.clearText(searchSalesCommissionAgent);
 		searchSalesCommissionAgent.sendKeys(fname);
+		Waitutilities.waitForVisibilityOfElement(searchSalesCommissionAgent, driver);
 	}
 	public String salesCommissionAgentInTable()
 	{
+		Waitutilities.waitForVisibilityOfElement(nameCellOfSalesCommissionAgent, driver);
 		String fNameSalesCommissionAgent = Pageutilities.getText(nameCellOfSalesCommissionAgent);
 		return fNameSalesCommissionAgent;
 	}
 	public QaLegendUserPage editSalesCommissionAgent()
 	{
 		Pageutilities.clickOnAnElement(editSalesCommissionAgentButton);
+		Waitutilities.waitForClickingElement(editSalesCommissionAgentButton, driver);
 		return this;
 	}
 	public void editAddressOfSalesCommissionAgent(String address)
 	{
 		Pageutilities.enterText(editAddressOfSalesCommissionAgent, address);
+		//Waitutilities.waitForTextToBePresentInElement(editAddressOfSalesCommissionAgent, driver, address);
+		Waitutilities.waitForVisibilityOfElement(editAddressOfSalesCommissionAgent, driver);
 	}
 	public void updateSalesCommissionAgentBtn()
 	{
+		Waitutilities.waitForClickingElement(saveSalesCommissionAgentbutton, driver);
 		Pageutilities.clickOnAnElement(saveSalesCommissionAgentbutton);
 	}
 

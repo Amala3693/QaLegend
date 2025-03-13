@@ -3,6 +3,9 @@ package Utilities;
 import java.sql.Driver;
 import java.time.Duration;
 
+import javax.lang.model.element.Element;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -48,6 +51,16 @@ public class Waitutilities {
 		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(Constants.EXPLICITWAIT));//calling static variable from constant class
 		wait.until(ExpectedConditions.invisibilityOf(element));
 	}
+	public static void waitTillClosingTheTab(WebDriver driver, WebElement element)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(Constants.EXPLICITWAIT));
+		wait.until(ExpectedConditions.numberOfElementsToBe((By) element, 100));
+	}
+	/*
+	 * //public static void idleWait() { WebDriverWait wait = new
+	 * WebDriverWait(driver,Duration.ofSeconds(Constants.EXPLICITWAIT));
+	 * wait.until(ExpectedConditions.vi) }
+	 */
 
 
 	

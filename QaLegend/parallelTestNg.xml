@@ -4,29 +4,28 @@
 	<listeners>
 		<listener class-name = "TestScripts.Listeners"></listener>
 	</listeners>
-  <test thread-count="2" name="Test">
+  <test thread-count="2" name="Test" parallel="Methods" groups="RoleGroup">
 	  <parameter name="browser" value="Chrome"></parameter>
     <classes>
       <class name="TestScripts.Qalegend_UsersTest">
 		  <methods>
-			  <!--<include name = "createUser"></include>
+			  <include name = "createUser"></include>
 			  <include name = "deleteUser"></include>
 			  <include name = "addRole"></include>
 			  <include name = "listRole"></include>
 			  <include name = "editRole"></include>
 			  <include name = "addSalesCommissionAgent"></include>
-			  <include name = "editSalesCommissionAgent"></include>-->
-			  <include name = "TC01"></include>
+			  <include name = "editSalesCommissionAgent"></include>
 			  
 		  </methods>
 	  </class>-->
-	 <!-- <class name="TestScripts.Qalegend_SuppliersTest">
+	  <class name="TestScripts.Qalegend_SuppliersTest">
 		  <methods>
 			  <include name = "addSuppliers"></include>
 			  <include name = "editSupplier"></include>
 			  <include name = "deleteSupplier"></include>
 		  </methods>
-    </class>-->
+    </class>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

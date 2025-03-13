@@ -12,6 +12,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
+
+import com.beust.jcommander.Parameter;
 
 import PageClasses.QaLegendContactsPage;
 import PageClasses.QaLegendHomePage;
@@ -28,7 +31,7 @@ public class Base_Class {
 	QaLegendContactsPage supplierpage;
 	Properties prop;
 	FileInputStream fis;
-	public WebDriver initializemethod(String browser) throws Exception
+	public WebDriver initializeMethod(String browser) throws Exception
 	{
 		if(browser.equalsIgnoreCase("Chrome"))
 		{
@@ -51,10 +54,11 @@ public class Base_Class {
 		return driver;
 	}
 
-	@BeforeMethod
-	public void initializemethod() throws Exception
+	@BeforeMethod(groups = "RoleGroup") //to run the groups
+	@Parameters({"browser"})
+	public void initializemethod(String browserName) throws Exception
 	{
-		driver= initializemethod("Chrome");
+		driver= initializeMethod(browserName);
 		prop = new Properties();
 		String path = System.getProperty("user.dir")+"\\src\\main\\resources\\TestData\\data.properties";
 		fis = new FileInputStream(path);

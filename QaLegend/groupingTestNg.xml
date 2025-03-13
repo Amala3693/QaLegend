@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Suite">
+	<listeners>
+		<listener class-name = "TestScripts.Listeners"></listener>
+	</listeners>
+  <test thread-count="2" name="Test">
+	  <parameter name="browser" value="Chrome"></parameter>
+	  <groups>
+		  <run>
+			  <include name = "RoleGroup"></include>
+		  </run>
+	  </groups>
+    <classes>
+      <class name="TestScripts.Qalegend_UsersTest">
+		  
+	  </class>-->
+	  <class name="TestScripts.Qalegend_SuppliersTest">
+		  
+    </class>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

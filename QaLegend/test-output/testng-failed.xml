@@ -5,10 +5,11 @@
     <listener class-name="TestScripts.Listeners"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
+    <parameter name="browser" value="Chrome"/>
     <classes>
       <class name="TestScripts.Qalegend_UsersTest">
         <methods>
-          <include name="listRole"/>
+          <include name="TC01"/>
           <include name="initializemethod"/>
           <include name="afterMethod"/>
         </methods>

@@ -19,11 +19,12 @@ import PageClasses.QaLegendUserPage;
 import PageClasses.Qalegend_Loginpage;
 import Utilities.ExcelUtilities;
 import Utilities.Fakertility;
+import Utilities.RetryAnalyzer;
 
 public class Qalegend_SuppliersTest extends Base_Class{
 	WebDriver driver;
 	
-	@Test
+	@Test(retryAnalyzer = RetryAnalyzer.class, priority = 1)
 	public void addSuppliers() throws IOException, InterruptedException
 	{
 		loginpage.loginToQalegend(prop.getProperty("username"),prop.getProperty("password"));
@@ -38,7 +39,7 @@ public class Qalegend_SuppliersTest extends Base_Class{
 		supplierpage.searchSupplier(supname);
 		Assert.assertEquals(supplierpage.supplierNameSearch(), supname);	
 	}
-	@Test
+	@Test(retryAnalyzer = RetryAnalyzer.class, priority = 2)
 	public void editSupplier() throws InterruptedException, IOException
 	{
 		loginpage.loginToQalegend(prop.getProperty("username"),prop.getProperty("password"));
@@ -51,20 +52,20 @@ public class Qalegend_SuppliersTest extends Base_Class{
 		String mobnum = ExcelUtilities.getIntegerData(1, 2, Constants.EXCELFILEPATH, "Sheet1")+Fakertility.getRandomNumber();
 		supplierpage.addSupplierString(supname, supbusname, mobnum);
 		supplierpage.searchSupplier(supname);
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		supplierpage.clickActionBtn();
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		supplierpage.clickOnEditBtn();
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		String supbussinessname = ExcelUtilities.getStringData(1, 3, Constants.EXCELFILEPATH, "Sheet1")+Fakertility.getRandomNumber();
 		supplierpage.editSupplierBusinessName(supbussinessname);
 		supplierpage.clickOnUpdateBtn();
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		supplierpage.searchSupplier(supname);
-		Thread.sleep(3000);	
+		//Thread.sleep(3000);	
 		Assert.assertEquals(supplierpage.supplierNameSearch(), supname);
 	}
-	@Test
+	@Test(retryAnalyzer = RetryAnalyzer.class, priority = 3)
 	public void deleteSupplier() throws InterruptedException, IOException
 	{
 		loginpage.loginToQalegend(prop.getProperty("username"),prop.getProperty("password"));
@@ -77,13 +78,13 @@ public class Qalegend_SuppliersTest extends Base_Class{
 		String mobnum = ExcelUtilities.getIntegerData(1, 2, Constants.EXCELFILEPATH, "Sheet1")+Fakertility.getRandomNumber();
 		supplierpage.addSupplierString(supname, supbusname, mobnum);
 		supplierpage.searchSupplier(supname);
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		supplierpage.clickActionBtn();
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		supplierpage.clickOnDeleteBtn();
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		supplierpage.searchSupplier(supname);
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		Assert.assertEquals(supplierpage.getsupplierTableStatus(), "No matching records found");
 	}
 

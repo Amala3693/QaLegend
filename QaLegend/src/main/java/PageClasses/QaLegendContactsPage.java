@@ -69,21 +69,29 @@ public class QaLegendContactsPage {
 	{
 		Pageutilities.clearText(searchSupplierBox);
 		searchSupplierBox.sendKeys(suname);
+		Waitutilities.waitForVisibilityOfElement(searchSupplierBox, driver);
 	}
 	public String supplierNameSearch()
 	{
+		//Waitutilities.waitForVisibilityOfElement(supplierNameCell, driver);
+		//Waitutilities.waitForElementToBeSelected(supplierNameCell, driver);
 		String sname = Pageutilities.getText(supplierNameCell);
+		Waitutilities.waitForVisibilityOfElement(supplierNameCell, driver);
+		
 		return sname;
 	}
 	public void clickActionBtn()
 	{
+		Waitutilities.waitForClickingElement(actionButton, driver);
 		Pageutilities.clickUsingJavaScriptExecuter(actionButton, driver);
 	}
 	public void clickOnDeleteBtn() throws InterruptedException
 	{
+		Waitutilities.waitForClickingElement(deleteSupplierButton, driver);
 		Pageutilities.clickOnAnElement(deleteSupplierButton);
-		Thread.sleep(3000);
 		Pageutilities.clickOnAnElement(deleteOkSupButton);
+		//Waitutilities.waitForClickingElement(deleteOkSupButton, driver);
+		Waitutilities.waitForElementtobeInvisible(driver, deleteOkSupButton);
 	}
 	public String getsupplierTableStatus()
 	{
@@ -91,21 +99,28 @@ public class QaLegendContactsPage {
 	}
 	public void clickOnEditBtn()
 	{
+		Waitutilities.waitForVisibilityOfElement(editSupplierButton, driver);
+		Waitutilities.waitForClickingElement(editSupplierButton, driver);
 		Pageutilities.clickOnAnElement(editSupplierButton);
 	}
 	public void clickOnUpdateBtn()
 	{
+		Waitutilities.waitForClickingElement(updateSupplierButton, driver);
 		Pageutilities.clickOnAnElement(updateSupplierButton);
+		Waitutilities.waitForElementtobeInvisible(driver, updateSupplierButton);
 	}
 	public void contactSupplierBox(String conid)
 	{
 		//Pageutilities.clearText(contactIdSupplierButton);
+		Waitutilities.waitForVisibilityOfElement(contactIdSupplierButton, driver);
 		Pageutilities.enterText(contactIdSupplierButton, conid);
 	}
 	public void editSupplierBusinessName(String businessName) 
 	{
+		Waitutilities.waitForVisibilityOfElement(updateSupBNameButton, driver);
 		updateSupBNameButton.clear();
 		updateSupBNameButton.sendKeys(businessName);
+		//Waitutilities.waitForTextToBePresentInElement(updateSupBNameButton, driver, businessName);
 	}
 	
 }
